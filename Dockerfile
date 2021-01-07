@@ -30,6 +30,10 @@ RUN useradd -m -s /bin/bash openmodelicausers
 # Copy the kernel from root location to non root location so that jupyter notebook when started as non-root can find openmodelica kernel
 RUN cp -R /root/.local/share/jupyter/kernels/OpenModelica /usr/local/share/jupyter/kernels/
 
+Get Dygraph for plotting in OM notebook
+WORKDIR /home/openmodelicausers
+RUN apt-get install -y curl && curl -O https://cdnjs.cloudflare.com/ajax/libs/dygraph/1.0.1/dygraph-combined.js
+
 # Change the container to non-root "openmodelicauser" and set the env 
 USER openmodelicausers
 ENV HOME /home/openmodelicausers
