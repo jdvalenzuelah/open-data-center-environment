@@ -5,7 +5,7 @@ Open Data Center Environment
 Basic information
 =================
 
-A toolkit for building data center environments and testing them with algorithms to improve data center's energy efficiency.
+A toolkit for building and testing data center environments optimization algorithms to improve data center's energy efficiency.
 
 Problem to solve
 ================
