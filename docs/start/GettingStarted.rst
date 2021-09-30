@@ -25,7 +25,9 @@ Getting Started
 
             $ sudo mkdir /sys/fs/cgroup/systemd
             $ sudo mount -t cgroup -o none,name=systemd cgroup /sys/fs/cgroup/systemd
-
+        
+        If running on apple silicon devices omc and omlib-modelica installation will fail since openmodelica provides packages just for x86, amd64, and armv7
+        to avoid such error you can add ``--platform linux/amd64`` to docker build command https://docs.docker.com/desktop/mac/apple-silicon/
 
 #. Copy notebooks
    ::
